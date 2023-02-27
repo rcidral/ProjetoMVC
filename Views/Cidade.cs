@@ -1,8 +1,8 @@
 using System;
-using CidadeController;
-using CidadeModel;
+using Controller;
+using Model;
 
-namespace CidadeView {
+namespace View {
     public class CidadeView {
         public static void createCidade() {
             try {

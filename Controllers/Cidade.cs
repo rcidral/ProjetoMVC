@@ -1,7 +1,7 @@
 using System.Collections;
-using CidadeModel;
+using Model;
 
-namespace CidadeController {
+namespace Controller {
     public class CidadeCollection : IEnumerable<Cidade> {
         public static List<Cidade> cidades = new List<Cidade>();
 

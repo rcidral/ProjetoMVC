@@ -1,7 +1,6 @@
 using System.Collections;
-using CidadeController;
 
-namespace CidadeModel {
+namespace Model {
     
     public class Cidade {
         public int id { get; set; }

@@ -1,4 +1,5 @@
 using System;
+using View;
 
 namespace Program {
     class Program {
@@ -11,13 +12,13 @@ namespace Program {
                 opcao = int.Parse(Console.ReadLine());
                 switch (opcao) {
                     case 1:
-                        CidadeView.CidadeView.menuCidade();
+                        CidadeView.menuCidade();
                         break;
                     case 2:
-                        CaminhaoView.CaminhaoView.menuCaminhao();
+                        CaminhaoView.menuCaminhao();
                         break;
                     case 3:
-                        RotaView.RotaView.menuRota();
+                        RotaView.menuRota();
                         break;
                     case 4: 
                         Console.WriteLine("Saindo...");

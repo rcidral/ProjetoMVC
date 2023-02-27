@@ -1,8 +1,8 @@
 using System;
-using CaminhaoController;
-using CaminhaoModel;
+using Controller;
+using Model;
 
-namespace CaminhaoView {
+namespace View {
 
     public class CaminhaoView {
 

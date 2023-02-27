@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace CaminhaoModel {
+namespace Model {
     
     public class Caminhao {
         public int id { get; set; }

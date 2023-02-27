@@ -1,7 +1,7 @@
 using System.Collections;
-using CaminhaoModel;
+using Model;
 
-namespace CaminhaoController {
+namespace Controller {
     public class CaminhaoCollection : IEnumerable<Caminhao> {
         public static List<Caminhao> caminhoes = new List<Caminhao>();
 

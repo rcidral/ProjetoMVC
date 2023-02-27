@@ -1,7 +1,7 @@
 using System.Collections;
-using RotaModel;
+using Model;
 
-namespace RotaController {
+namespace Controller {
     public class RotaCollection : IEnumerable<Rota> {
         public static List<Rota> rotas = new List<Rota>();
 

@@ -1,12 +1,8 @@
 using System;
-using RotaController;
-using RotaModel;
-using CaminhaoController;
-using CaminhaoModel;
-using CidadeController;
-using CidadeModel;
+using Controller;
+using Model;
 
-namespace RotaView {
+namespace View {
     public class RotaView {
         public static void createRota() {
             try {

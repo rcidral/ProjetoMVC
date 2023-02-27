@@ -1,8 +1,7 @@
 using System.Collections;
-using CaminhaoModel;
-using CidadeModel;
+using Model;
 
-namespace RotaModel {
+namespace Model {
     
     public class Rota {
         public int id { get; set; }

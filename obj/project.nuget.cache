@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8YlW5uN/6RM7hugLMMkJxuDyBtJybDAJJxWg+JFN6xj3hrtLTQy0AyVzYHx8S0hyBNQf3MMdCARs/VGyJ7SeFw==",
+  "dgSpecHash": "hZrLee1nTIjpvhyhgHUNuc/qj9JPyROzxbEDxq+acTkRUipFw1QV4UgB52jHzLid63yLQ75ensC/h2eW7LA3NQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoAula\\ProjetoAula.csproj",
+  "projectFilePath": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoMVC\\ProjetoAula.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

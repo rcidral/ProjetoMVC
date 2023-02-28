@@ -10,8 +10,10 @@ namespace View {
             try {
                 Console.WriteLine("Digite o ID do caminhão: ");
                 int id = int.Parse(Console.ReadLine());
-                Console.WriteLine("Digite a placa do caminhão: ");
+                Console.WriteLine("Digite a placa do caminhão sem o -: ");
                 string placa = Console.ReadLine();
+                verificaPlaca(placa);
+                placa = placa.Insert(3, "-");
                 Console.WriteLine("Digite o nome do motorista: ");
                 string motorista = Console.ReadLine();
                 Caminhao caminhao = new Caminhao(id, placa, motorista);
@@ -66,6 +68,22 @@ namespace View {
                 }
             } catch (Exception e) {
                 Console.WriteLine("Erro ao deletar caminhão: " + e.Message);
+            }
+        }
+
+        public static void verificaPlaca(string placa) {
+            if (placa.Length != 7) {
+                throw new Exception("Placa inválida!");
+            }
+            for (int i = 0; i < 3; i++) {
+                if (!char.IsLetter(placa[i])) {
+                    throw new Exception("Placa inválida!");
+                }
+            }
+            for (int i = 3; i < 7; i++) {
+                if (!char.IsDigit(placa[i])) {
+                    throw new Exception("Placa inválida!");
+                }
             }
         }
 

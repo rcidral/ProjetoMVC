@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ricardo.machado2\\Dev\\ProjetoAula\\ProjetoAula.csproj": {}
+    "C:\\Users\\ricardo.machado2\\Dev\\ProjetoMVC\\ProjetoAula.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ricardo.machado2\\Dev\\ProjetoAula\\ProjetoAula.csproj": {
+    "C:\\Users\\ricardo.machado2\\Dev\\ProjetoMVC\\ProjetoAula.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoAula\\ProjetoAula.csproj",
+        "projectUniqueName": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoMVC\\ProjetoAula.csproj",
         "projectName": "ProjetoAula",
-        "projectPath": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoAula\\ProjetoAula.csproj",
+        "projectPath": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoMVC\\ProjetoAula.csproj",
         "packagesPath": "C:\\Users\\ricardo.machado2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoAula\\obj\\",
+        "outputPath": "C:\\Users\\ricardo.machado2\\Dev\\ProjetoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

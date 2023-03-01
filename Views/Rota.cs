@@ -10,12 +10,24 @@ namespace View {
                 int id = int.Parse(Console.ReadLine());
                 Console.WriteLine("Digite o id do caminhão: ");
                 int idCaminhao = int.Parse(Console.ReadLine());
+                while(CaminhaoCollection.GetById(idCaminhao) == null) {
+                    Console.WriteLine("Caminhão não encontrado, digite novamente: ");
+                    idCaminhao = int.Parse(Console.ReadLine());
+                }
                 Caminhao idCaminhaoVerificado = CaminhaoCollection.GetById(idCaminhao);
                 Console.WriteLine("Digite o id da cidade de partida: ");
                 int idPartida = int.Parse(Console.ReadLine());
+                while(CidadeCollection.GetById(idPartida) == null) {
+                    Console.WriteLine("Cidade não encontrada, digite novamente: ");
+                    idPartida = int.Parse(Console.ReadLine());
+                }
                 Cidade idCidadePartidaVerificado = CidadeCollection.GetById(idPartida);
                 Console.WriteLine("Digite o id da cidade de chegada: ");
                 int idChegada = int.Parse(Console.ReadLine());
+                while(CidadeCollection.GetById(idChegada) == null) {
+                    Console.WriteLine("Cidade não encontrada, digite novamente: ");
+                    idChegada = int.Parse(Console.ReadLine());
+                }
                 Cidade idCidadeChegadaVerificado = CidadeCollection.GetById(idChegada);
                 Console.WriteLine("Digite a data da rota: ");
                 string data = Console.ReadLine();
@@ -46,12 +58,24 @@ namespace View {
                 if (rota != null) {
                     Console.WriteLine("Digite o id do caminhão: ");
                     int idCaminhao = int.Parse(Console.ReadLine());
+                    while(CaminhaoCollection.GetById(idCaminhao) == null) {
+                    Console.WriteLine("Caminhão não encontrado, digite novamente: ");
+                    idCaminhao = int.Parse(Console.ReadLine());
+                    }
                     Caminhao idCaminhaoVerificado = CaminhaoCollection.GetById(idCaminhao);
                     Console.WriteLine("Digite o id da cidade de partida: ");
                     int idPartida = int.Parse(Console.ReadLine());
+                    while(CidadeCollection.GetById(idPartida) == null) {
+                        Console.WriteLine("Cidade não encontrada, digite novamente: ");
+                        idPartida = int.Parse(Console.ReadLine());
+                    }
                     Cidade idCidadePartidaVerificado = CidadeCollection.GetById(idPartida);
                     Console.WriteLine("Digite o id da cidade de chegada: ");
                     int idChegada = int.Parse(Console.ReadLine());
+                    while(CidadeCollection.GetById(idChegada) == null) {
+                        Console.WriteLine("Cidade não encontrada, digite novamente: ");
+                        idChegada = int.Parse(Console.ReadLine());
+                    }
                     Cidade idCidadeChegadaVerificado = CidadeCollection.GetById(idChegada);
                     Console.WriteLine("Digite a data da rota: ");
                     string data = Console.ReadLine();

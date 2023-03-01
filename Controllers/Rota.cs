@@ -7,6 +7,13 @@ namespace Controller {
 
         public static void Add(Rota rota) {
             rotas.Add(rota);
+            if (CaminhaoCollection.totalRotas(rota.caminhao.id) != 0) {
+                rota.caminhao.rotas++;
+            }
+            if(CaminhaoCollection.faturamento(rota.caminhao.id) != 0) {
+                rota.caminhao.faturamento += rota.preco;
+            }
+             
         }
 
         public static bool Remove(int id) {
@@ -25,6 +32,7 @@ namespace Controller {
                 rotaAntiga.partida = rota.partida;
                 rotaAntiga.chegada = rota.chegada;
                 rotaAntiga.data = rota.data;
+                rotaAntiga.preco = rota.preco;
                 return true;
             }
             return false;
@@ -45,6 +53,14 @@ namespace Controller {
 
         IEnumerator IEnumerable.GetEnumerator() {
             return GetEnumerator();
+        }
+
+        public double mediaDasRotas() {
+            double total = 0;
+            foreach (Rota rota in rotas) {
+                total += rota.preco;
+            }
+            return total / rotas.Count;
         }
     }
 }

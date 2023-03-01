@@ -19,7 +19,9 @@ namespace View {
                 Cidade idCidadeChegadaVerificado = CidadeCollection.GetById(idChegada);
                 Console.WriteLine("Digite a data da rota: ");
                 string data = Console.ReadLine();
-                Rota rota = new Rota(id, idCaminhaoVerificado, idCidadePartidaVerificado, idCidadeChegadaVerificado, data);
+                Console.WriteLine("Digite o preço da rota: ");
+                double preco = double.Parse(Console.ReadLine());
+                Rota rota = new Rota(id, idCaminhaoVerificado, idCidadePartidaVerificado, idCidadeChegadaVerificado, data, preco);
                 RotaCollection.Add(rota);
             } catch (Exception e) {
                 Console.WriteLine("Erro: " + e.Message);
@@ -53,10 +55,13 @@ namespace View {
                     Cidade idCidadeChegadaVerificado = CidadeCollection.GetById(idChegada);
                     Console.WriteLine("Digite a data da rota: ");
                     string data = Console.ReadLine();
+                    Console.WriteLine("Digite o preço da rota: ");
+                    double preco = double.Parse(Console.ReadLine());
                     rota.caminhao = idCaminhaoVerificado;
                     rota.partida = idCidadePartidaVerificado;
                     rota.chegada = idCidadeChegadaVerificado;
                     rota.data = data;
+                    rota.preco = preco;
                     Console.WriteLine("Rota atualizada com sucesso!");
                 } else {
                     Console.WriteLine("Rota não encontrada!");

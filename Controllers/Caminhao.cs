@@ -44,6 +44,26 @@ namespace Controller {
         IEnumerator IEnumerable.GetEnumerator() {
             return GetEnumerator();
         }
+
+        public static int totalRotas(int id) {
+            int total = 0;
+            foreach (Rota rota in RotaCollection.rotas) {
+                if (rota.caminhao.id == id) {
+                    total++;
+                }
+            }
+            return total;
+        }
+
+        public static double faturamento(int id) {
+            double total = 0;
+            foreach (Rota rota in RotaCollection.rotas) {
+                if (rota.caminhao.id == id) {
+                    total += rota.preco;
+                }
+            }
+            return total;
+        }
     }
 
 }

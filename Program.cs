@@ -6,6 +6,7 @@ namespace Program {
         static void Main(string[] args) {
             int opcao = 0;
             while(opcao != 4) {
+                
                 Console.WriteLine("1 - CRUD Cidade");
                 Console.WriteLine("2 - CRUD Caminhão");
                 Console.WriteLine("3 - CRUD Rota");

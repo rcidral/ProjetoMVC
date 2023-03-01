@@ -75,17 +75,14 @@ namespace View {
             try {
                 Console.WriteLine("Digite o ID da rota que deseja deletar: ");
                 int id = int.Parse(Console.ReadLine());
-                if (RotaCollection.Remove(id)) {
-                    Console.WriteLine("Rota deletada com sucesso!");
-                } else {
-                    Console.WriteLine("Rota não encontrada!");
-                }
+                Rota rota = RotaCollection.GetById(id);
             } catch (Exception e) {
                 Console.WriteLine("Erro: " + e.Message);
             }
         }
 
         public static void menuRota() {
+            RotaCollection.mediaRotas();
             try {
                 int opcao = 0;
                 while (opcao != 5) {

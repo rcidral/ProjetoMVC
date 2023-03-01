@@ -9,22 +9,18 @@ namespace Controller {
             cidades.Add(cidade);
         }
 
-        public static bool Remove(int id) {
+        public static void Remove(int id) {
             Cidade cidade = GetById(id);
             if (cidade != null) {
                 cidades.Remove(cidade);
-                return true;
             }
-            return false;
         }
 
-        public static bool Update(Cidade cidade) {
+        public static void Update(Cidade cidade) {
             Cidade cidadeAntiga = GetById(cidade.id);
             if (cidadeAntiga != null) {
                 cidadeAntiga.nome = cidade.nome;
-                return true;
             }
-            return false;
         }
 
         public static Cidade GetById(int id) {

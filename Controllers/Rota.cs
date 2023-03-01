@@ -13,19 +13,18 @@ namespace Controller {
             if(CaminhaoCollection.faturamento(rota.caminhao.id) != 0) {
                 rota.caminhao.faturamento += rota.preco;
             }
-             
         }
 
-        public static bool Remove(int id) {
+        public static void Remove(int id) {
             Rota rota = GetById(id);
             if (rota != null) {
                 rotas.Remove(rota);
-                return true;
+                rota.caminhao.rotas--;
+                rota.caminhao.faturamento -= rota.preco;
             }
-            return false;
         }
 
-        public static bool Update(Rota rota) {
+        public static void Update(Rota rota) {
             Rota rotaAntiga = GetById(rota.id);
             if (rotaAntiga != null) {
                 rotaAntiga.caminhao = rota.caminhao;
@@ -33,9 +32,7 @@ namespace Controller {
                 rotaAntiga.chegada = rota.chegada;
                 rotaAntiga.data = rota.data;
                 rotaAntiga.preco = rota.preco;
-                return true;
             }
-            return false;
         }
 
         public static Rota GetById(int id) {
@@ -55,12 +52,14 @@ namespace Controller {
             return GetEnumerator();
         }
 
-        public double mediaDasRotas() {
-            double total = 0;
-            foreach (Rota rota in rotas) {
-                total += rota.preco;
+        public static void mediaRotas() {
+            foreach(Rota rota in rotas) {
+                foreach(Caminhao caminhao in CaminhaoCollection.caminhoes) {
+                    if(rota.caminhao.id == caminhao.id) {
+                        rota.media = rota.preco / caminhao.rotas;
+                    }
+                }
             }
-            return total / rotas.Count;
         }
     }
 }

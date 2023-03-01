@@ -9,23 +9,19 @@ namespace Controller {
             caminhoes.Add(caminhao);
         }
 
-        public static bool Remove(int id) {
+        public static void Remove(int id) {
             Caminhao caminhao = GetById(id);
             if (caminhao != null) {
                 caminhoes.Remove(caminhao);
-                return true;
             }
-            return false;
         }
 
-        public static bool Update(Caminhao caminhao) {
+        public static void Update(Caminhao caminhao) {
             Caminhao caminhaoAntigo = GetById(caminhao.id);
             if (caminhaoAntigo != null) {
-                caminhaoAntigo.placa = caminhao.placa;
                 caminhaoAntigo.motorista = caminhao.motorista;
-                return true;
+                caminhaoAntigo.placa = caminhao.placa;
             }
-            return false;
         }
 
         public static Caminhao GetById(int id) {

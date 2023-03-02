@@ -10,7 +10,6 @@ namespace Model {
         public Cidade chegada { get; set; }
         public string data { get; set; } 
         public double preco { get; set; }
-        public double media { get; set; }
 
         public Rota(int id, Caminhao caminhao, Cidade partida, Cidade chegada, string data, double preco) {
             this.id = id;
@@ -19,11 +18,10 @@ namespace Model {
             this.chegada = chegada;
             this.data = data;
             this.preco = preco;
-            this.media = 0;
         }
 
          public override string ToString() {
-            return $"Rota: ID: {id}, Caminhão: {caminhao.motorista}, Partida: {partida.nome}, Chegada: {chegada.nome}, Data: {data}, Preço: {preco}, Média: {media}";
+            return $"Rota: ID: {id}, Caminhão: {caminhao.motorista}, Partida: {partida.nome}, Chegada: {chegada.nome}, Data: {data}, Preço: {preco}";
         }
     }
 }

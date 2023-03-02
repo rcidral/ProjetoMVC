@@ -114,7 +114,8 @@ namespace View {
                     Console.WriteLine("2 - Listar rotas");
                     Console.WriteLine("3 - Atualizar rota");
                     Console.WriteLine("4 - Deletar rota");
-                    Console.WriteLine("5 - Voltar");
+                    Console.WriteLine("5 - Visualizar média de rotas");
+                    Console.WriteLine("6 - Voltar");
                     opcao = int.Parse(Console.ReadLine());
                     switch (opcao) {
                         case 1:
@@ -130,6 +131,9 @@ namespace View {
                             deleteRota();
                             break;
                         case 5:
+                            Console.WriteLine("A média das rotas é: " + RotaCollection.mediaRotas());
+                            break;
+                        case 6:
                             Console.WriteLine("Voltando...");
                             break;
                         default:

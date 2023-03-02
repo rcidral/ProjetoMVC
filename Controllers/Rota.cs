@@ -14,9 +14,6 @@ namespace Controller {
             if(CaminhaoCollection.faturamento(rota.caminhao.id) != 0) {
                 rota.caminhao.faturamento += rota.preco;
             }
-            if(RotaCollection.mediaRotas() != 0) {
-                rota.media = rota.preco / rota.caminhao.rotas;
-            }
         }
 
         public static void Remove(int id) {
@@ -63,7 +60,7 @@ namespace Controller {
                 media += rota.preco;
                 totalRotas++;
             }
-            return media / (totalRotas/2);
+            return media / (totalRotas);
         }
     }
 }

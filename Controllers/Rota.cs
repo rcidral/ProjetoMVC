@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using Model;
 
 namespace Controller {
@@ -12,6 +13,9 @@ namespace Controller {
             }
             if(CaminhaoCollection.faturamento(rota.caminhao.id) != 0) {
                 rota.caminhao.faturamento += rota.preco;
+            }
+            if(RotaCollection.mediaRotas() != 0) {
+                rota.media = rota.preco / rota.caminhao.rotas;
             }
         }
 
@@ -52,14 +56,14 @@ namespace Controller {
             return GetEnumerator();
         }
 
-        public static void mediaRotas() {
-            foreach(Rota rota in rotas) {
-                foreach(Caminhao caminhao in CaminhaoCollection.caminhoes) {
-                    if(rota.caminhao.id == caminhao.id) {
-                        rota.media = rota.preco / caminhao.rotas;
-                    }
-                }
+        public static double mediaRotas() {
+            double media = 0;
+            int totalRotas = 0;
+            foreach (Rota rota in rotas) {
+                media += rota.preco;
+                totalRotas++;
             }
+            return media / (totalRotas/2);
         }
     }
 }
